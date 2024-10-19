@@ -1,0 +1,13 @@
+.sidebar .chat-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .user-photo {
+    width: 40px; /* ajuste o tamanho conforme necessário */
+    height: 40px; /* ajuste o tamanho conforme necessário */
+    border-radius: 50%; /* formato circular */
+    margin-right: 10px; /* espaçamento entre a foto e o nome */
+  }
+  
