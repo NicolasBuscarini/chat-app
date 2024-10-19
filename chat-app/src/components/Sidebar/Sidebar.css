@@ -1,13 +1,23 @@
-.sidebar .chat-item {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-  }
-  
-  .user-photo {
-    width: 40px; /* ajuste o tamanho conforme necessário */
-    height: 40px; /* ajuste o tamanho conforme necessário */
-    border-radius: 50%; /* formato circular */
-    margin-right: 10px; /* espaçamento entre a foto e o nome */
-  }
-  
+.chat-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.chat-item:hover {
+  background-color: #f0f0f0;
+}
+
+.user-photo {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.sidebar {
+  height: 100vh; /* Altura total da tela */
+  overflow-y: auto; /* Permite rolagem vertical */
+}
