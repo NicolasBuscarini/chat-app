@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#messages {
+    height: 300px;
+    overflow-y: scroll;
+    margin-bottom: 10px;
+}
+
+#messages div {
+    margin-bottom: 10px;
+}
+
+.sidebar {
+    height: 100vh;
+    background-color: #f8f9fa;
+    border-right: 1px solid #ddd;
+}
+
+.sidebar .chat-item {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.sidebar .chat-item:hover {
+    background-color: #e9ecef;
+}
