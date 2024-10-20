@@ -1,0 +1,37 @@
+services:
+  mongo:
+    image: mongo:4.4
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - chat-network
+
+  nodejs:
+    build: ./server
+    container_name: nodejs-server
+    ports:
+      - "3003:3003"  # Porta do servidor Node.js
+    depends_on:
+      - mongo
+    networks:
+      - chat-network
+
+  react:
+    build:
+      context: ./chat-app 
+      dockerfile: Dockerfile
+    container_name: react-app
+    ports:
+      - "3000:80"
+    networks:
+      - chat-network
+
+volumes:
+  mongo-data:
+
+networks:
+  chat-network:
+    driver: bridge
